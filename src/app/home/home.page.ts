@@ -12,7 +12,7 @@ export class HomePage {
   option = {
     slidesPerView: 3.5,
     loop: false,
-    spaceBetween: 10,
+    spaceBetween: 5,
     freeMode: true,
   }
 }
