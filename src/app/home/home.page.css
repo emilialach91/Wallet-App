@@ -47,6 +47,14 @@
   margin: auto;
 }
 
+.operation-icon ion-icon {
+  color: black;
+  font-size: 20px;
+  background-color: white;
+  border-radius: 50%;
+  padding: 10px;
+}
+
 .operation-text {
   font-size: 12px;
   margin: 3px 0;
@@ -101,14 +109,6 @@ ion-row {
           justify-content: space-between;
 }
 
-.operation-icon ion-icon {
-  color: black;
-  font-size: 25px;
-  background-color: white;
-  border-radius: 50%;
-  padding: 10px;
-}
-
 ion-col {
   text-align: center;
 }
@@ -137,6 +137,34 @@ ion-slides {
           justify-content: center;
 }
 
+.service {
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+  margin: 0;
+}
+
+.service-card {
+  margin-top: 0;
+  margin-right: 0px;
+  width: 110px;
+  height: 80px;
+  background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 .card-img {
   width: 50px;
   width: 40px;
@@ -144,7 +172,7 @@ ion-slides {
 }
 
 .slider-text {
-  margin: 0 0 5px 0;
+  margin: 0 10px 5px 10px;
   color: #ACACAC;
   font-size: 8px;
   font-weight: 600;

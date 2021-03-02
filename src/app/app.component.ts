@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   constructor() {}
+
+  this.platform.ready().then(() => {
+    this.statusBar.overlaysWebView(true);
+    this.statusBar.styleLightContent();
+});
 }
