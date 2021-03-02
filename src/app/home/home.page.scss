@@ -43,10 +43,27 @@ ion-card {
   font-weight: lighter;
   color: #ACACAC;
 }
-.last-transaction {
-  background-color: white;
-  // height: 150px;
+
+.transaction-title {
+  margin: 10px 0 5px 0;
+  font-size: 16px;
 }
+
+.transaction-date, .transaction-status{
+  margin: 0 0 10px 0;
+  font-size: 14px;
+  color: #ACACAC;
+  font-style: italic;
+}
+
+.transaction-value{
+  margin: 10px 0 5px 0;
+  font-size: 15px;
+  font-weight: 500;
+  color: #29c467;
+}
+
+
 ion-item {
   --background: white;
 }
