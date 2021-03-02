@@ -1,14 +1,51 @@
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content id="container">
 
-  <div id="container">
-    <strong>Duuuupa</strong>
-    <ion-button href="top-up" color="dark">Top Up</ion-button>
-    <ion-button href="outgoing-transfer" color="dark">Outgoing Transfer</ion-button>
-    
-  </div>
+  <ion-text color="dark">
+    <ion-row>
+      <ion-row>
+        <ion-button href="home"><ion-icon name="arrow-back-outline" class="navigation-icon"></ion-icon></ion-button>
+        <h5 class="title">Transactions</h5>
+      </ion-row>
+      <ion-icon name="refresh-outline" class="navigation-icon"></ion-icon>
+    </ion-row>
+  </ion-text>
+
+  <ion-label class="transfer-date">Date of transaction</ion-label>
+  <ion-card >
+    <ion-col>
+      <ion-row >
+        <ion-label class="transaction-title">Received</ion-label>
+        <ion-label class="transaction-value">100 ETN</ion-label>
+      </ion-row>
+      <ion-row>
+        <ion-label class="transaction-date">Data</ion-label>
+        <ion-label class="transaction-status">status</ion-label>
+      </ion-row>
+    </ion-col>
+    <ion-col>
+      <ion-row>
+        <ion-label class="transaction-title">Received</ion-label>
+        <ion-label class="transaction-value">100 ETN</ion-label>
+      </ion-row>
+      <ion-row>
+        <ion-label class="transaction-date">Data</ion-label>
+        <ion-label class="transaction-status">status</ion-label>
+      </ion-row>  
+    </ion-col>
+  </ion-card>
+
+  <ion-label class="transfer-date">Date of transaction</ion-label>
+  <ion-card >
+    <ion-col>
+      <ion-row>
+        <ion-label class="transaction-title">Received</ion-label>
+        <ion-label class="transaction-value">100 ETN</ion-label>
+      </ion-row>
+      <ion-row>
+        <ion-label class="transaction-date">Data</ion-label>
+        <ion-label class="transaction-status">status</ion-label>
+      </ion-row>  
+    </ion-col>
+  </ion-card>
+
 </ion-content>
