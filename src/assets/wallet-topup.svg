@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="200px" height="200px" viewBox="0 0 200 200" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 58 (84663) - https://sketch.com -->
+    <title>Artboard</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Artboard" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="wallet-topup" transform="translate(42.000000, 0.000000)" fill-rule="nonzero">
+            <rect id="Rectangle" fill="#2AADF3" x="0" y="0" width="116" height="200" rx="18"></rect>
+            <rect id="Rectangle-Copy" fill="#FFFFFF" x="11" y="17" width="94" height="156" rx="8"></rect>
+            <rect id="Rectangle" fill="#FFFFFF" x="48" y="7" width="20" height="3" rx="1.5"></rect>
+            <rect id="Rectangle" fill="#FFFFFF" x="44" y="180" width="28" height="10" rx="5"></rect>
+            <path d="M60.5072226,59.7618453 C60.8492453,60.0098118 61.1498276,60.3103941 61.397794,60.6524168 L82.5571463,89.8377303 C83.8538393,91.6262723 83.4551168,94.1273494 81.6665748,95.4240423 C80.9838011,95.9190533 80.1620407,96.1856006 79.3187045,96.1856006 L68,96.185 L68,128 C68,130.209139 66.209139,132 64,132 L52,132 C49.790861,132 48,130.209139 48,128 L48,96.185 L37,96.1856006 C34.790861,96.1856006 33,94.3947396 33,92.1856006 C33,91.3422644 33.2665472,90.520504 33.7615582,89.8377303 L54.9209105,60.6524168 C56.2176034,58.8638748 58.7186806,58.4651524 60.5072226,59.7618453 Z" id="Combined-Shape" fill="#2AADF3"></path>
+        </g>
+    </g>
+</svg>

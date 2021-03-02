@@ -3,34 +3,43 @@
   background-color: #f5f6f8;
 }
 
-ion-card {
-  --background:#56b0ed;
-  --color: white;
-}
-
 .title {
-  margin-left: 10px;
+  font-size: 14px;
+  margin: 10px 0 10px 10px;
 }
 
 .refresh {
-  margin: auto;
+  margin-top: 2px;
 }
 
 .refresh-text {
-  font-size: 10px;
+  font-size: 8px;
+  font-weight: 600;
   color: #ACACAC;
   margin: 0;
 }
 
+.main-card {
+  background-color: #56b0ed;
+  color: white;
+  margin: 0 10px;
+}
+
 .balance h1 {
+  font-size: 16px;
   margin: 15px 10px 5px 10px;
   color: white;
   font-weight: 400;
 }
 
 .rate h3 {
-  margin: 0 10px;
+  font-size: 15px;
+  margin: 0 10px 15px 10px;
   font-weight: 300;
+}
+
+.rate {
+  margin: 0;
 }
 
 .rate ion-icon {
@@ -38,30 +47,48 @@ ion-card {
   margin: auto;
 }
 
+.operation-text {
+  font-size: 12px;
+  margin: 3px 0;
+}
+
 .navigation-icon {
-  font-size: 25px;
+  font-size: 20px;
   margin: auto 10px auto 0;
   font-weight: lighter;
   color: #ACACAC;
 }
 
 .transaction-title {
-  margin: 10px 0 5px 0;
-  font-size: 16px;
+  font-size: 12px;
 }
 
 .transaction-date, .transaction-status {
-  margin: 0 0 10px 0;
-  font-size: 14px;
+  font-size: 11px;
   color: #ACACAC;
   font-style: italic;
 }
 
 .transaction-value {
-  margin: 10px 0 5px 0;
-  font-size: 15px;
+  font-size: 12px;
   font-weight: 500;
   color: #29c467;
+}
+
+.info {
+  font-size: 10px;
+  margin: 5px 0 5px 10px;
+  color: #ACACAC;
+  font-weight: 600;
+}
+
+.availability {
+  margin-bottom: 0px;
+}
+
+.last-transactions {
+  margin: 0 10px;
+  padding: 0;
 }
 
 ion-item {
@@ -74,18 +101,53 @@ ion-row {
           justify-content: space-between;
 }
 
-ion-icon {
+.operation-icon ion-icon {
   color: black;
-}
-
-ion-button {
-  --background: #f5f6f8;
-  height: 50px;
-  width: 50px;
-  --border-radius: 50%;
+  font-size: 25px;
+  background-color: white;
+  border-radius: 50%;
+  padding: 10px;
 }
 
 ion-col {
+  text-align: center;
+}
+
+ion-slides {
+  margin: 0 10px;
+}
+
+.slider-card {
+  margin: 0;
+  background-color: white;
+  width: 90px;
+  height: 110px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.card-img {
+  width: 50px;
+  width: 40px;
+  margin: auto;
+}
+
+.slider-text {
+  margin: 0 0 5px 0;
+  color: #ACACAC;
+  font-size: 8px;
+  font-weight: 600;
   text-align: center;
 }
 /*# sourceMappingURL=home.page.css.map */

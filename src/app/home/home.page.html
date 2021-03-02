@@ -13,7 +13,7 @@
     </ion-row>
   </ion-text>
 
-  <ion-card>
+  <ion-card class="main-card">
     <ion-row class="balance">
       <h1>Balance</h1>
       <h1>8.30 ETN</h1>
@@ -23,24 +23,18 @@
       <h3>0.05 GBP<ion-icon name="caret-down-outline"></ion-icon></h3>
     </ion-row>
 
-    <ion-row>
+    <ion-row class="operation-icon">
       <ion-col>
-        <ion-button>
-          <ion-icon name="arrow-up-outline"></ion-icon>
-        </ion-button>
-        <p>Pay</p>
+        <ion-icon name="arrow-up-outline"></ion-icon>
+        <p class="operation-text">Pay</p>
       </ion-col>
       <ion-col>
-        <ion-button>
-          <ion-icon name="arrow-down-outline"></ion-icon>
-        </ion-button>
-        <p>Receive</p>
+        <ion-icon name="arrow-down-outline"></ion-icon>
+        <p class="operation-text">Receive</p>
       </ion-col>
       <ion-col>
-        <ion-button>
-          <ion-icon name="notifications-outline"></ion-icon>
-        </ion-button>
-        <p>Receive</p>
+        <ion-icon name="notifications-outline"></ion-icon>  
+        <p class="operation-text">Notifications</p>
       </ion-col>
     </ion-row>
   </ion-card>
@@ -52,7 +46,7 @@
     </ion-row>
   </ion-text>
 
-  <ion-card>
+  <ion-card class="last-transactions">
 
     <ion-item>
       <ion-col>
@@ -67,7 +61,7 @@
       </ion-col>
     </ion-item>
 
-    <ion-item>
+    <ion-item lines="none">
       <ion-col>
         <ion-row>
           <ion-label class="transaction-title">Received</ion-label>
@@ -76,7 +70,7 @@
         <ion-row>
           <ion-label class="transaction-date">Data</ion-label>
           <ion-label class="transaction-status">status</ion-label>
-        </ion-row>
+        </ion-row>  
       </ion-col>
     </ion-item>
     
@@ -84,92 +78,105 @@
 
   <ion-text color="dark">
     <ion-row>
-      <h5 class="title">Pay with ETN</h5>
-      <ion-icon name="help-circle-outline"></ion-icon>
+      <h5 class="title availability">Pay with ETN</h5>
+      <ion-icon name="help-circle-outline" class="navigation-icon"></ion-icon>
     </ion-row>
-    <p>Available in United Kingdom</p>
+    <p class="info">Available in United Kingdom</p>
   </ion-text>
 
-  <ion-slides [options]="option" class="ion-margin-top">
-    
-    
-    <ion-slide>
-      <ion-card>
-        <h1>Slide  1</h1>
-      </ion-card>
-    </ion-slide>
+  <ion-slides [options]="option">
     
     <ion-slide>
-      <ion-card>
-        <h1>Slide  2</h1>
+      <ion-card class="slider-card">
+        <img src="assets/logo.svg" class="card-img">
+        <p class="slider-text">3 United Kingdom</p>
       </ion-card>
     </ion-slide>
 
     <ion-slide>
-      <ion-card>
-        <h1>Slide  3</h1>
+      <ion-card class="slider-card">
+        <img src="assets/logo.svg" class="card-img">
+        <p class="slider-text">Asda Mobile United Kingdom</p>
       </ion-card>
     </ion-slide>
 
     <ion-slide>
-      <ion-card>
-        <h1>Slide  4</h1>
+      <ion-card class="slider-card">
+        <img src="assets/logo.svg" class="card-img">
+        <p class="slider-text">giffgaff United Kingdom</p>
       </ion-card>
     </ion-slide>
 
     <ion-slide>
-      <ion-card>
-        <h1>Slide  5</h1>
+      <ion-card class="service-card">
+        <img src="assets/logo.svg" class="card-img">
+        <p class="slider-text">Lebara UK</p>
+      </ion-card>
+    </ion-slide>
+
+    <ion-slide >
+      <ion-card class="service-card">
+        <img src="assets/logo.svg" class="card-img">
+        <p class="slider-text">Lyca Mobile UK</p>
       </ion-card>
     </ion-slide>
 
     <ion-slide>
-      <ion-card>
-        <h1>Slide  6</h1>
+      <ion-card class="slider-card">
+        <img src="assets/logo.svg" class="card-img">
+        <p class="slider-text">Now Mobile United Kingdom</p>
+      </ion-card>
+    </ion-slide>
+
+    <ion-slide>
+      <ion-card class="slider-card">
+        <img src="assets/logo.svg" class="card-img">
+        <p class="slider-text">02 United Kingdom</p>
       </ion-card>
     </ion-slide>
     
     <ion-slide>
-      <ion-card>
-        <h1>Slide  7</h1>
+      <ion-card class="slider-card">
+        <img src="assets/logo.svg" class="card-img">
+        <p class="slider-text">Tesco Mobile UK</p>
       </ion-card>
     </ion-slide>
 
     <ion-slide>
-      <ion-card>
-        <h1>Slide  8</h1>
+      <ion-card class="slider-card">
+        <img src="assets/logo.svg" class="card-img">
+        <p class="slider-text">Virgin United Kingdom</p>
       </ion-card>
     </ion-slide>
 
     <ion-slide>
-      <ion-card>
-        <h1>Slide  9</h1>
+      <ion-card class="slider-card">
+        <img src="assets/logo.svg" class="card-img">
+        <p class="slider-text">Vodafone United Kingdom</p>
       </ion-card>
     </ion-slide>
 
-    <ion-slide>
-      <ion-card>
-        <h1>Slide  10</h1>
+    <ion-slide >
+      <ion-card class="slider-card">
+        <img src="assets/logo.svg" class="card-img">
+        <p class="slider-text">YepINGO</p>
       </ion-card>
     </ion-slide>
 
-    <ion-slide>
-      <ion-card>
-        <h1>Slide  11</h1>
-      </ion-card>
-    </ion-slide>
   </ion-slides>
 
   <ion-text color="dark">
-    <p>All categories</p>
+    <p class="info">All categories</p>
   </ion-text>
 
-  <ion-row>
-    <ion-card>
-      <h1>Utilities</h1>
+  <ion-row >
+    <ion-card class="slider-card">
+      <img src="assets/wallet-utilities.svg" class="card-img">
+      <p class="slider-text">Utilities</p>
     </ion-card>
-    <ion-card>
-      <h1>Top-up</h1>
+    <ion-card class="slider-card">
+      <img src="assets/wallet-topup.svg" class="card-img">
+      <p class="slider-text">Top-Up</p>
     </ion-card>
   </ion-row>
 
