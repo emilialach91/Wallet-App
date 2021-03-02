@@ -11,6 +11,14 @@ const routes: Routes = [
     loadChildren: () => import('./transactions/transactions.module').then( m => m.Transactions)
   },
   {
+    path: 'top-up',
+    loadChildren: () => import('./top-up/top-up.module').then( m => m.TopUp)
+  },
+  {
+    path: 'outgoing-transfer',
+    loadChildren: () => import('./outgoing-transfer/outgoing-transfer.module').then( m => m.OutgoingTransfer)
+  },
+  {
     path: '',
     redirectTo: 'home',
     pathMatch: 'full'

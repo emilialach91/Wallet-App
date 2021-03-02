@@ -9,4 +9,10 @@ export class HomePage {
 
   constructor() {}
 
+  option = {
+    slidesPerView: 3.5,
+    loop: false,
+    spaceBetween: 10,
+    freeMode: true,
+  }
 }

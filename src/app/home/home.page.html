@@ -1,12 +1,197 @@
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content id="container">
+  
+  <ion-text color="dark">
+    <ion-row>
+      <h5 class="title">Wallet</h5>
+      <ion-row>
+        <ion-col class="refresh">
+          <p class="refresh-text">Last refreshed</p>
+          <p class="refresh-text">Just now</p>
+        </ion-col>
+        <ion-icon name="refresh-outline" class="navigation-icon"></ion-icon>
+      </ion-row>
+    </ion-row>
+  </ion-text>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+  <ion-card>
+    <ion-row class="balance">
+      <h1>Balance</h1>
+      <h1>8.30 ETN</h1>
+    </ion-row>
+    <ion-row class="rate">
+      <h3>BBP Value</h3>
+      <h3>0.05 GBP<ion-icon name="caret-down-outline"></ion-icon></h3>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <ion-button>
+          <ion-icon name="arrow-up-outline"></ion-icon>
+        </ion-button>
+        <p>Pay</p>
+      </ion-col>
+      <ion-col>
+        <ion-button>
+          <ion-icon name="arrow-down-outline"></ion-icon>
+        </ion-button>
+        <p>Receive</p>
+      </ion-col>
+      <ion-col>
+        <ion-button>
+          <ion-icon name="notifications-outline"></ion-icon>
+        </ion-button>
+        <p>Receive</p>
+      </ion-col>
+    </ion-row>
+  </ion-card>
+
+  <ion-text color="dark">
+    <ion-row>
+      <h5 class="title">Transactions</h5>
+      <ion-icon name="arrow-forward" class="navigation-icon"></ion-icon>
+    </ion-row>
+  </ion-text>
+
+  <ion-card>
+
+    <ion-item>
+      <ion-col>
+        <ion-row >
+          <ion-label class="transactions-title">Received</ion-label>
+          <ion-label class="transactions-value">100 ETN</ion-label>
+        </ion-row>
+        <ion-row>
+          <ion-label class="transactions-date">Data</ion-label>
+          <ion-label class="transactions-status">stauatus</ion-label>
+        </ion-row>
+      </ion-col>
+    </ion-item>
+
+    <ion-item>
+      <ion-col>
+        <ion-row>
+          <ion-label class="transactions-title">Received</ion-label>
+          <ion-label class="transactions-value">100 ETN</ion-label>
+        </ion-row>
+        <ion-row>
+          <ion-label class="transactions-date">Data</ion-label>
+          <ion-label class="transactions-status">stauatus</ion-label>
+        </ion-row>
+      </ion-col>
+    </ion-item>
+    
+  </ion-card>
+
+  <ion-text color="dark">
+    <ion-row>
+      <h5 class="title">Pay with ETN</h5>
+      <ion-icon name="help-circle-outline"></ion-icon>
+    </ion-row>
+    <p>Available in United Kingdom</p>
+  </ion-text>
+
+  <ion-slides [options]="option" class="ion-margin-top">
+    
+    
+    <ion-slide>
+      <ion-card>
+        <h1>Slide  1</h1>
+      </ion-card>
+    </ion-slide>
+    
+    <ion-slide>
+      <ion-card>
+        <h1>Slide  2</h1>
+      </ion-card>
+    </ion-slide>
+
+    <ion-slide>
+      <ion-card>
+        <h1>Slide  3</h1>
+      </ion-card>
+    </ion-slide>
+
+    <ion-slide>
+      <ion-card>
+        <h1>Slide  4</h1>
+      </ion-card>
+    </ion-slide>
+
+    <ion-slide>
+      <ion-card>
+        <h1>Slide  5</h1>
+      </ion-card>
+    </ion-slide>
+
+    <ion-slide>
+      <ion-card>
+        <h1>Slide  6</h1>
+      </ion-card>
+    </ion-slide>
+    
+    <ion-slide>
+      <ion-card>
+        <h1>Slide  7</h1>
+      </ion-card>
+    </ion-slide>
+
+    <ion-slide>
+      <ion-card>
+        <h1>Slide  8</h1>
+      </ion-card>
+    </ion-slide>
+
+    <ion-slide>
+      <ion-card>
+        <h1>Slide  9</h1>
+      </ion-card>
+    </ion-slide>
+
+    <ion-slide>
+      <ion-card>
+        <h1>Slide  10</h1>
+      </ion-card>
+    </ion-slide>
+
+    <ion-slide>
+      <ion-card>
+        <h1>Slide  11</h1>
+      </ion-card>
+    </ion-slide>
+  </ion-slides>
+
+  <ion-text color="dark">
+    <p>All categories</p>
+  </ion-text>
+
+  <ion-row>
+    <ion-card>
+      <h1>Utilities</h1>
+    </ion-card>
+    <ion-card>
+      <h1>Top-up</h1>
+    </ion-card>
+  </ion-row>
+
 </ion-content>
+
+<!-- <ion-tabs>
+  <ion-tab-bar>
+    <ion-tab-button tab="discover">
+      <ion-icon name="search-outline"></ion-icon>
+      <ion-label>Discover</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button tab="wallet">
+      <ion-icon name="wallet-outline"></ion-icon>
+      <ion-label>Wallet</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button tab="more">
+      <ion-icon name="ellipsis-horizontal-outline"></ion-icon>
+      <ion-label>More</ion-label>
+    </ion-tab-button>
+  </ion-tab-bar>
+</ion-tabs> -->
+
+
