@@ -11,8 +11,8 @@ export class HomePage {
 
   option = {
     slidesPerView: 3.5,
-    loop: false,
     spaceBetween: 5,
+    loop: false,
     freeMode: true,
   }
 }
