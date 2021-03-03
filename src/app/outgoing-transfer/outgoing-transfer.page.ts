@@ -5,6 +5,7 @@ import { Component } from '@angular/core';
   templateUrl: 'outgoing-transfer.page.html',
   styleUrls: ['outgoing-transfer.page.scss'],
 })
+
 export class OutgoingTransferPage{
 
   constructor() {}

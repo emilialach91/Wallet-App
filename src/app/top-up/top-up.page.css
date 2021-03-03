@@ -4,6 +4,10 @@ ion-row {
           justify-content: space-between;
 }
 
+ion-item {
+  --background: white;
+}
+
 .operator-logo {
   width: 50px;
   height: 50px;
@@ -21,10 +25,17 @@ ion-row {
   color: white;
 }
 
-.close-icon {
+ion-button {
   position: absolute;
   right: 10px;
   top: 10px;
+  --background: transparent;
+  --box-shadow: none;
+  --border: none;
+  outline: none;
+}
+
+.close-icon {
   font-size: 20px;
   background-color: white;
   border-radius: 50%;
@@ -51,6 +62,11 @@ ion-row {
   margin: 5px 0 30px 0;
 }
 
+.navigation-icon {
+  margin: auto 10px;
+  color: #ACACAC;
+}
+
 p {
   font-size: 10px;
   color: #ACACAC;
@@ -62,5 +78,28 @@ p {
   width: 90%;
   border-radius: 10px;
   margin: 0 auto;
+  background-color: white;
+}
+
+.detail-title {
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.detail-value {
+  font-size: 12px;
+  font-weight: 400;
+  color: #ACACAC;
+  margin-top: 5px;
+}
+
+.status-title, .fee-title {
+  font-size: 14px;
+  color: #7e7c7c;
+  font-weight: 400;
+}
+
+.status-value, .fee-value {
+  font-size: 14px;
 }
 /*# sourceMappingURL=top-up.page.css.map */

@@ -74,4 +74,8 @@ ion-card {
   --width: 70%;
   --height: 35%;
 }
+
+a {
+  text-decoration: none;
+}
 /*# sourceMappingURL=transactions.page.css.map */
