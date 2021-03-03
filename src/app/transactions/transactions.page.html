@@ -3,20 +3,20 @@
   <ion-text color="dark">
     <ion-row>
       <ion-row>
-        <ion-button href="home"><ion-icon name="arrow-back-outline" class="navigation-icon"></ion-icon></ion-button>
+        <ion-icon name="arrow-back-outline" class="navigation-icon" (click)="backClicked()"></ion-icon>
         <h5 class="title">Transactions</h5>
       </ion-row>
       <ion-icon name="refresh-outline" class="navigation-icon"></ion-icon>
     </ion-row>
   </ion-text>
 
-  <div *ngFor="let transaction of transactions | keyvalue">
+  <div *ngFor="let transaction of transactionsByDate| keyvalue">
     <ion-label class="transfer-date">{{transaction.key}}</ion-label>
 
     <ion-card >
 
       <ion-col *ngFor="let col of transaction.value" >
-        <ion-row>
+        <ion-row (click)="openTransactionWithState(col.id, col.topUpInfo !== undefined ? true : false)">
           <ion-label class="transaction-title">Received</ion-label>
           <ion-label class="transaction-value"> {{col.destinationAmount}} ETN</ion-label>
         </ion-row>

@@ -23,17 +23,10 @@ ion-item {
   color: white;
 }
 
-ion-button {
+.close-icon {
   position: absolute;
   right: 10px;
   top: 10px;
-  --background: transparent;
-  --box-shadow: none;
-  --border: none;
-    outline: none;
-}
-
-.close-icon {
   font-size: 20px;
   background-color: white;
   border-radius: 50%;

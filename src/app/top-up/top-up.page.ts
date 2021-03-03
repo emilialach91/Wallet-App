@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
+import { Router } from '@angular/router';
+import {Location} from '@angular/common';
 
 @Component({
   selector: 'top-up',
@@ -9,14 +10,17 @@ import { ActivatedRoute, Router } from '@angular/router';
 export class TopUpPage{
 
   data: any;
- 
-  constructor(private router: Router) {
+
+  constructor(private router: Router, private _location: Location) {
     if (this.router.getCurrentNavigation().extras.state) {
       this.data = this.router.getCurrentNavigation().extras.state.transaction;
     }
   }
 
   ionViewWillEnter() {
-    console.log('trans', this.data)
+  }
+  
+  backClicked() {
+    this._location.back();
   }
 }

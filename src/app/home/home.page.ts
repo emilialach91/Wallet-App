@@ -26,11 +26,6 @@ export class HomePage {
           this.balance = data["wallet"].balance
           this.transactions = data["transactions"]
           this.suggestions = data["pay_with_etn"].suggestions
-
-          console.log('data', this.data)
-          console.log('suggestions', this.suggestions)
-
-
         })
     }
 
@@ -60,9 +55,6 @@ export class HomePage {
         };
         this.router.navigate(['outgoing-transfer'], navigationExtras);
       }
-
-      console.log(id, topUp)
-      console.log(this.transactions.find(transaction => transaction.id === id))
     }
 
   option = {

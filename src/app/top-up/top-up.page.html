@@ -1,6 +1,6 @@
 <ion-content>
     <ion-card class="main-card">
-        <ion-button href="transactions"><ion-icon name="close-outline" class="close-icon"></ion-icon></ion-button>
+        <ion-icon name="close-outline" class="close-icon" (click)="backClicked()"></ion-icon>
         <ion-col>
             <img src="{{data.topUpInfo.logo}}" class="operator-logo">
             <h3 class="operator-name">{{data.topUpInfo.operatorName}}</h3>

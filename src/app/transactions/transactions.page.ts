@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
+import { Router, NavigationExtras } from '@angular/router';
 import { DatePipe } from '@angular/common';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'transactions',
@@ -10,8 +11,9 @@ import { DatePipe } from '@angular/common';
 export class TransactionsPage{
 
   transactions: any;
+  transactionsByDate: any;
  
-  constructor(private router: Router, private datepipe: DatePipe) {
+  constructor(private router: Router, private datepipe: DatePipe, private _location: Location) {
     if (this.router.getCurrentNavigation().extras.state) {
       this.transactions = this.router.getCurrentNavigation().extras.state.transactions;
 
@@ -19,9 +21,29 @@ export class TransactionsPage{
         transaction.dateCreated = datepipe.transform(transaction.dateCreated, 'EE MMM d y')
      });
 
-      this.transactions = this.groupData(this.transactions, 'dateCreated')
+      this.transactionsByDate = this.groupData(this.transactions, 'dateCreated')
     }
   }
+
+  openTransactionWithState(id, topUp) {
+
+    if (topUp === true) {
+      let navigationExtras: NavigationExtras = {
+        state: {
+          transaction: this.transactions.find(transaction => transaction.id === id)
+        }
+      };
+      this.router.navigate(['top-up'], navigationExtras);
+    } else {
+      let navigationExtras: NavigationExtras = {
+        state: {
+          transaction: this.transactions.find(transaction => transaction.id === id)
+        }
+      };
+      this.router.navigate(['outgoing-transfer'], navigationExtras);
+    }
+  }
+
 
   groupData(xs, key) {
     return xs.reduce(function(rv, x) {
@@ -31,6 +53,13 @@ export class TransactionsPage{
   }
 
   ionViewWillEnter() {
-    console.log('dataaa', this.transactions)
+    
+  }
+
+  backClicked() {
+    this._location.back();
   }
 }
+
+
+
