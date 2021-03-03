@@ -11,10 +11,10 @@
   
     <ion-card class="overlay-card">
         <ion-row >
-            <ion-item>
+            <ion-item lines="none">
                 <ion-label class="status-title">Status</ion-label>
             </ion-item>
-            <ion-item>
+            <ion-item lines="none">
                 <ion-label class="status-value">{{data.status === 1 ? 'Pending' : ''}}{{data.status === 2 ? 'Complete' : ''}}{{data.status === 3 ? 'Failed' : ''}}</ion-label>
             </ion-item>
         </ion-row>
@@ -46,10 +46,10 @@
       </ion-text>
     <ion-card class="card">
         <ion-row >
-            <ion-item>
+            <ion-item lines="none">
                 <ion-label class="fee-title">Transaction Fee</ion-label>
             </ion-item>
-            <ion-item>
+            <ion-item lines="none">
                 <ion-label class="fee-value">{{data.fee}} ETN</ion-label>
             </ion-item>
         </ion-row>
