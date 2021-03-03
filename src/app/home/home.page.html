@@ -16,7 +16,7 @@
   <ion-card class="main-card">
     <ion-row class="balance">
       <h1>Balance</h1>
-      <h1>8.30 ETN</h1>
+      <h1>{{balance}} ETN</h1>
     </ion-row>
     <ion-row class="rate">
       <h3>BBP Value</h3>
@@ -48,14 +48,14 @@
 
   <ion-card class="last-transactions">
     
-    <ion-item>
+    <ion-item >
       <ion-col>
         <ion-row >
-          <ion-label class="transaction-title">Received</ion-label>
-          <ion-label class="transaction-value">100 ETN</ion-label>
+          <ion-label class="transaction-title"></ion-label>
+          <ion-label class="transaction-value"></ion-label>
         </ion-row>
         <ion-row>
-          <ion-label class="transaction-date">Data</ion-label>
+          <ion-label class="transaction-date"></ion-label>
           <ion-label class="transaction-status">status</ion-label>
         </ion-row>
       </ion-col>
@@ -86,80 +86,10 @@
 
   <ion-slides [options]="option">
     
-    <ion-slide>
+    <ion-slide *ngFor="let suggestion of suggestions">
       <ion-card class="slider-card">
-        <img src="assets/logo.svg" class="card-img">
-        <p class="slider-text">3 United Kingdom</p>
-      </ion-card>
-    </ion-slide>
-
-    <ion-slide>
-      <ion-card class="slider-card">
-        <img src="assets/logo.svg" class="card-img">
-        <p class="slider-text">Asda Mobile United Kingdom</p>
-      </ion-card>
-    </ion-slide>
-
-    <ion-slide>
-      <ion-card class="slider-card">
-        <img src="assets/logo.svg" class="card-img">
-        <p class="slider-text">giffgaff United Kingdom</p>
-      </ion-card>
-    </ion-slide>
-
-    <ion-slide>
-      <ion-card class="slider-card">
-        <img src="assets/logo.svg" class="card-img">
-        <p class="slider-text">Lebara UK</p>
-      </ion-card>
-    </ion-slide>
-
-    <ion-slide >
-      <ion-card class="slider-card">
-        <img src="assets/logo.svg" class="card-img">
-        <p class="slider-text">Lyca Mobile UK</p>
-      </ion-card>
-    </ion-slide>
-
-    <ion-slide>
-      <ion-card class="slider-card">
-        <img src="assets/logo.svg" class="card-img">
-        <p class="slider-text">Now Mobile United Kingdom</p>
-      </ion-card>
-    </ion-slide>
-
-    <ion-slide>
-      <ion-card class="slider-card">
-        <img src="assets/logo.svg" class="card-img">
-        <p class="slider-text">02 United Kingdom</p>
-      </ion-card>
-    </ion-slide>
-    
-    <ion-slide>
-      <ion-card class="slider-card">
-        <img src="assets/logo.svg" class="card-img">
-        <p class="slider-text">Tesco Mobile UK</p>
-      </ion-card>
-    </ion-slide>
-
-    <ion-slide>
-      <ion-card class="slider-card">
-        <img src="assets/logo.svg" class="card-img">
-        <p class="slider-text">Virgin United Kingdom</p>
-      </ion-card>
-    </ion-slide>
-
-    <ion-slide>
-      <ion-card class="slider-card">
-        <img src="assets/logo.svg" class="card-img">
-        <p class="slider-text">Vodafone United Kingdom</p>
-      </ion-card>
-    </ion-slide>
-
-    <ion-slide >
-      <ion-card class="slider-card">
-        <img src="assets/logo.svg" class="card-img">
-        <p class="slider-text">YepINGO</p>
+        <img src="{{suggestion.logo}}" class="card-img">
+        <p class="slider-text">{{suggestion.name}}</p>
       </ion-card>
     </ion-slide>
 
@@ -171,18 +101,18 @@
 
   <ion-row class="service">
     <ion-card class="service-card">
-      <img src="assets/wallet-utilities.svg" class="card-img">
+      <img src="assets/wallet-utilities.svg" class="service-img">
       <p class="slider-text">Utilities</p>
     </ion-card>
     <ion-card class="service-card">
-      <img src="assets/wallet-topup.svg" class="card-img">
+      <img src="assets/wallet-topup.svg" class="service-img">
       <p class="slider-text">Top-Up</p>
     </ion-card>
   </ion-row>
 
 </ion-content>
 
-<ion-tab-bar slot="bottom">
+<ion-tab-bar>
   <ion-tab-button tab="discover">
     <ion-icon name="search-outline"></ion-icon>
     <ion-label>Discover</ion-label>
@@ -198,5 +128,7 @@
     <ion-label>More</ion-label>
   </ion-tab-button>
 </ion-tab-bar>
+
+
 
 
