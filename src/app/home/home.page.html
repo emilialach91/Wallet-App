@@ -42,38 +42,24 @@
   <ion-text color="dark">
     <ion-row>
       <h5 class="title">Transactions</h5>
-      <ion-button  href="transactions"><ion-icon name="arrow-forward" class="navigation-icon"></ion-icon></ion-button>
+      <ion-button (click)="openTransactionsWithState()"><ion-icon name="arrow-forward" class="navigation-icon"></ion-icon></ion-button>
     </ion-row>
   </ion-text>
 
-  <ion-card class="last-transactions">
+  <ion-card class="last-transactions" *ngFor="let transaction of transactions | keyvalue | slice: 0:2">
     
-    <ion-item >
+    <ion-item (click)="openTransactionWithState(transaction.value.id, transaction.value.topUpInfo !== undefined ? true : false)">
       <ion-col>
         <ion-row >
-          <ion-label class="transaction-title"></ion-label>
-          <ion-label class="transaction-value"></ion-label>
+          <ion-label class="transaction-title">{{transaction.value.paymentType === 1 ? 'Received' : ''}}{{transaction.value.paymentType === 2 ? 'Sent' : ''}}{{transaction.value.paymentType === 3 ? 'Top Up' : ''}}</ion-label>
+          <ion-label class="transaction-value">{{transaction.value.destinationAmount}} ETN</ion-label>
         </ion-row>
         <ion-row>
-          <ion-label class="transaction-date"></ion-label>
-          <ion-label class="transaction-status">status</ion-label>
+          <ion-label class="transaction-date">{{transaction.value.dateCreated | date: 'mediumDate'}}. {{transaction.value.dateCreated | date: 'h:mm'}}</ion-label>
+          <ion-label class="transaction-status">{{transaction.value.status === 1 ? 'Pending' : ''}}{{transaction.value.status === 2 ? 'Complete' : ''}}{{transaction.value.status === 3 ? 'Failed' : ''}}</ion-label>
         </ion-row>
       </ion-col>
     </ion-item>
-
-    <ion-item lines="none">
-      <ion-col>
-        <ion-row>
-          <ion-label class="transaction-title">Received</ion-label>
-          <ion-label class="transaction-value">100 ETN</ion-label>
-        </ion-row>
-        <ion-row>
-          <ion-label class="transaction-date">Data</ion-label>
-          <ion-label class="transaction-status">status</ion-label>
-        </ion-row>  
-      </ion-col>
-    </ion-item>
-    
   </ion-card>
 
   <ion-text color="dark">

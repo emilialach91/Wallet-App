@@ -34,36 +34,36 @@ export class HomePage {
         })
     }
 
-    // openTransactionsWithState() {
-    //   let navigationExtras: NavigationExtras = {
-    //     state: {
-    //       transactions: this.transactions
-    //     }
-    //   };
-    //   this.router.navigate(['transactions'], navigationExtras);
-    // }
+    openTransactionsWithState() {
+      let navigationExtras: NavigationExtras = {
+        state: {
+          transactions: this.transactions
+        }
+      };
+      this.router.navigate(['transactions'], navigationExtras);
+    }
 
-    // openTransactionWithState(id, topUp) {
+    openTransactionWithState(id, topUp) {
 
-    //   if (topUp === true) {
-    //     let navigationExtras: NavigationExtras = {
-    //       state: {
-    //         transaction: this.transactions.find(transaction => transaction.id === id)
-    //       }
-    //     };
-    //     this.router.navigate(['top-up'], navigationExtras);
-    //   } else {
-    //     let navigationExtras: NavigationExtras = {
-    //       state: {
-    //         transaction: this.transactions.find(transaction => transaction.id === id)
-    //       }
-    //     };
-    //     this.router.navigate(['outgoing-transfer'], navigationExtras);
-    //   }
+      if (topUp === true) {
+        let navigationExtras: NavigationExtras = {
+          state: {
+            transaction: this.transactions.find(transaction => transaction.id === id)
+          }
+        };
+        this.router.navigate(['top-up'], navigationExtras);
+      } else {
+        let navigationExtras: NavigationExtras = {
+          state: {
+            transaction: this.transactions.find(transaction => transaction.id === id)
+          }
+        };
+        this.router.navigate(['outgoing-transfer'], navigationExtras);
+      }
 
-    //   console.log(id, topUp)
-    //   console.log(this.transactions.find(transaction => transaction.id === id))
-    // }
+      console.log(id, topUp)
+      console.log(this.transactions.find(transaction => transaction.id === id))
+    }
 
   option = {
     slidesPerView: 3.5,

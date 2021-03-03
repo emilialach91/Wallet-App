@@ -10,43 +10,25 @@
     </ion-row>
   </ion-text>
 
-  <ion-label class="transfer-date">Date of transaction</ion-label>
-  <ion-card >
+  <div *ngFor="let transaction of transactions | keyvalue">
+    <ion-label class="transfer-date">{{transaction.key}}</ion-label>
 
-    <a href="top-up">
-      <ion-row>
-        <ion-label class="transaction-title">Received</ion-label>
-        <ion-label class="transaction-value">100 ETN</ion-label>
-      </ion-row>  
-      <ion-row>
-        <ion-label class="transaction-date">Data</ion-label>
-        <ion-label class="transaction-status">status</ion-label>
-      </ion-row>
-    </a>
-    <a href="outgoing-transfer">
-      <ion-row>
-        <ion-label class="transaction-title">Received</ion-label>
-        <ion-label class="transaction-value">100 ETN</ion-label>
-      </ion-row>  
-      <ion-row>
-        <ion-label class="transaction-date">Data</ion-label>
-        <ion-label class="transaction-status">status</ion-label>
-      </ion-row>
-    </a> 
-  </ion-card>
+    <ion-card >
 
-  <ion-label class="transfer-date">Date of transaction</ion-label>
-  <ion-card >
-      <a href="outgoing-transfer">
+      <ion-col *ngFor="let col of transaction.value" >
         <ion-row>
           <ion-label class="transaction-title">Received</ion-label>
-          <ion-label class="transaction-value">100 ETN</ion-label>
-        </ion-row>  
-        <ion-row>
-          <ion-label class="transaction-date">Data</ion-label>
-          <ion-label class="transaction-status">status</ion-label>
+          <ion-label class="transaction-value"> {{col.destinationAmount}} ETN</ion-label>
         </ion-row>
-      </a>
-  </ion-card>
+        <ion-row>
+          <ion-label class="transaction-date">{{transaction.key}}</ion-label>
+          <ion-label class="transaction-status">
+            {{col.status === 1 ? 'Pending' : ''}}{{col.status === 2 ? 'Complete' : ''}}{{col.status === 3 ? 'Failed' : ''}}
+          </ion-label>
+        </ion-row>
+      </ion-col>
+
+    </ion-card>
+  </div>
 
 </ion-content>

@@ -1,13 +1,22 @@
-  import { Component } from '@angular/core';
+import { Component } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'top-up',
   templateUrl: 'top-up.page.html',
   styleUrls: ['top-up.page.scss'],
 })
+export class TopUpPage{
 
-export class TopUpPage {
+  data: any;
+ 
+  constructor(private router: Router) {
+    if (this.router.getCurrentNavigation().extras.state) {
+      this.data = this.router.getCurrentNavigation().extras.state.transaction;
+    }
+  }
 
-  constructor() {}
-
+  ionViewWillEnter() {
+    console.log('trans', this.data)
+  }
 }
