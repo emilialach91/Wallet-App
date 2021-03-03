@@ -95,4 +95,8 @@ p {
 .status-value, .fee-value {
   font-size: 14px;
 }
+
+.status-icon {
+  font-size: 8px;
+}
 /*# sourceMappingURL=top-up.page.css.map */

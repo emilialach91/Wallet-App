@@ -56,7 +56,9 @@
         </ion-row>
         <ion-row>
           <ion-label class="transaction-date">{{transaction.value.dateCreated | date: 'mediumDate'}}. {{transaction.value.dateCreated | date: 'h:mm'}}</ion-label>
-          <ion-label class="transaction-status">{{transaction.value.status === 1 ? 'Pending' : ''}}{{transaction.value.status === 2 ? 'Complete' : ''}}{{transaction.value.status === 3 ? 'Failed' : ''}}</ion-label>
+          <ion-label class="transaction-status"><ion-icon name="ellipse-sharp" class="status-icon" color="{{transaction.value.status === 1 ? 'warning' : ''}}{{transaction.value.status === 2 ? 'success' : ''}}{{transaction.value.status === 3 ? 'danger' : ''}}"></ion-icon>
+            {{transaction.value.status === 1 ? 'Pending' : ''}}{{transaction.value.status === 2 ? 'Complete' : ''}}{{transaction.value.status === 3 ? 'Failed' : ''}}
+          </ion-label>
         </ion-row>
       </ion-col>
     </ion-item>

@@ -15,7 +15,9 @@
                 <ion-label class="status-title">Status</ion-label>
             </ion-item>
             <ion-item lines="none">
-                <ion-label class="status-value">{{data.status === 1 ? 'Pending' : ''}}{{data.status === 2 ? 'Complete' : ''}}{{data.status === 3 ? 'Failed' : ''}}</ion-label>
+                <ion-label class="status-value"><ion-icon name="ellipse-sharp" class="status-icon" color="{{data.status === 1 ? 'warning' : ''}}{{data.status === 2 ? 'success' : ''}}{{data.status === 3 ? 'danger' : ''}}"></ion-icon>
+                    {{data.status === 1 ? 'Pending' : ''}}{{data.status === 2 ? 'Complete' : ''}}{{data.status === 3 ? 'Failed' : ''}}
+                </ion-label>
             </ion-item>
         </ion-row>
     </ion-card>
