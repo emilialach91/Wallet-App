@@ -69,4 +69,9 @@ ion-card {
   color: #8f8e8e;
   font-weight: 600;
 }
+
+.my-custom-class {
+  --width: 70%;
+  --height: 35%;
+}
 /*# sourceMappingURL=transactions.page.css.map */

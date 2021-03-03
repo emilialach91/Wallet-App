@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ModalController} from '@ionic/angular';  
+import { ModalController } from '@ionic/angular';  
 import { TopUpPage } from '../top-up/top-up.page';  
 
 @Component({
@@ -12,7 +12,7 @@ export class TransactionsPage {
   async showModal() {  
     const modal = await this.modalCtrl.create({  
       component: TopUpPage,
-      cssClass: 'my-modal'
+      cssClass: 'my-custom-class',
     });  
     return await modal.present();  
   }  

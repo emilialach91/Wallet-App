@@ -14,5 +14,6 @@ export class TopUpPage implements OnInit {
   }  
   dismiss() {  
     this.modalCtrl.dismiss();  
-  }  
+  } 
+
 }  
