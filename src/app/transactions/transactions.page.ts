@@ -18,10 +18,10 @@ export class TransactionsPage{
       this.transactions = this.router.getCurrentNavigation().extras.state.transactions;
 
       this.transactions.forEach(transaction =>  {
-        transaction.dateCreated = datepipe.transform(transaction.dateCreated, 'EE MMM d y')
+        transaction.dateCreatedTransformed = datepipe.transform(transaction.dateCreated, 'EE MMM d y')
      });
 
-      this.transactionsByDate = this.groupData(this.transactions, 'dateCreated')
+      this.transactionsByDate = this.groupData(this.transactions, 'dateCreatedTransformed')
     }
   }
 

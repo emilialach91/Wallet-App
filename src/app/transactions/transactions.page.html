@@ -21,7 +21,7 @@
             <ion-label class="transaction-value"> {{transactionDetails.destinationAmount}} ETN</ion-label>
           </ion-row>
           <ion-row>
-            <ion-label class="transaction-date">{{transaction.key}}</ion-label>
+            <ion-label class="transaction-date">{{transactionDetails.dateCreated | date: 'mediumDate'}}, {{transactionDetails.dateCreated | date: 'h:mm'}}</ion-label>
             <ion-label class="transaction-status"><ion-icon name="ellipse-sharp" class="status-icon" color="{{transactionDetails.status === 1 ? 'warning' : ''}}{{transactionDetails.status === 2 ? 'success' : ''}}{{transactionDetails.status === 3 ? 'danger' : ''}}"></ion-icon>
               {{transactionDetails.status === 1 ? 'Pending' : ''}}{{transactionDetails.status === 2 ? 'Complete' : ''}}{{transactionDetails.status === 3 ? 'Failed' : ''}}
             </ion-label>
