@@ -14,7 +14,6 @@ export class TransactionsPage{
   transactionsByDate: any;
  
   constructor(private router: Router, private datepipe: DatePipe, private _location: Location) {
-    if (this.router.getCurrentNavigation().extras.state) {
 
       // Getting data from parent (Home Page)
       if (this.router.getCurrentNavigation().extras.state) {
@@ -30,7 +29,6 @@ export class TransactionsPage{
     //  Group data by transformed date
 
       this.transactionsByDate = this.groupData(this.transactions, 'dateCreatedTransformed')
-    }
   }
 
   // Routing to specific transaction depending on id and type of transaction (with passing data)
