@@ -1,3 +1,8 @@
+#container {
+  font-family: 'Open Sans', sans-serif;
+  background-color: #f5f6f8;
+}
+
 ion-row {
   justify-content: space-between;
 }
@@ -40,13 +45,13 @@ ion-item {
   border-radius: 10px;
   margin: 0 auto;
   background-color: white;
-
 }
 
 .operator-name, .top-up-value {
   font-size: 15px;
   margin: 5px;
 }
+
 .transfer-date {
   font-size: 12px;
   font-weight: 400;
