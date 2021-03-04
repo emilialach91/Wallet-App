@@ -15,15 +15,25 @@ export class TransactionsPage{
  
   constructor(private router: Router, private datepipe: DatePipe, private _location: Location) {
     if (this.router.getCurrentNavigation().extras.state) {
-      this.transactions = this.router.getCurrentNavigation().extras.state.transactions;
+
+      // Getting data from parent (Home Page)
+      if (this.router.getCurrentNavigation().extras.state) {
+        this.transactions = this.router.getCurrentNavigation().extras.state.transactions;
+      }
+
+      // Add transformed date to data
 
       this.transactions.forEach(transaction =>  {
         transaction.dateCreatedTransformed = datepipe.transform(transaction.dateCreated, 'EE MMM d y')
      });
 
+    //  Group data by transformed date
+
       this.transactionsByDate = this.groupData(this.transactions, 'dateCreatedTransformed')
     }
   }
+
+  // Routing to specific transaction depending on id and type of transaction (with passing data)
 
   openTransactionWithState(id, topUp) {
 
@@ -44,12 +54,16 @@ export class TransactionsPage{
     }
   }
 
+  // Helper for grouping data
+
   groupData(xs, key) {
     return xs.reduce(function(rv, x) {
       (rv[x[key]] = rv[x[key]] || []).push(x);
       return rv;
     }, {});
   }
+
+  // Routing back
 
   backClicked() {
     this._location.back();

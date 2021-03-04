@@ -12,13 +12,15 @@ export class TopUpPage{
   data: any;
 
   constructor(private router: Router, private _location: Location) {
+
+    // Getting data from parrent
+    
     if (this.router.getCurrentNavigation().extras.state) {
       this.data = this.router.getCurrentNavigation().extras.state.transaction;
     }
   }
 
-  ionViewWillEnter() {
-  }
+  // Routing back
   
   backClicked() {
     this._location.back();
