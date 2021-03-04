@@ -3,7 +3,7 @@
     <ion-icon name="close-outline" class="close-icon" (click)="backClicked()"></ion-icon>
       <ion-col>
           <h5 class="top-up-value"> Sent {{data["destinationAmount"]}} ETN </h5>
-          <h6 class="transfer-date">{{data.dateCreated | date: 'mediumDate'}}. {{data.dateCreated | date: 'h:mm'}}</h6>
+          <h6 class="transfer-date">{{data.dateCreated | date: 'mediumDate'}}, {{data.dateCreated | date: 'h:mm'}}</h6>
       </ion-col>
   </ion-card>
 

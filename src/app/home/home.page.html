@@ -55,7 +55,7 @@
           <ion-label class="transaction-value">{{transaction.value.destinationAmount}} ETN</ion-label>
         </ion-row>
         <ion-row>
-          <ion-label class="transaction-date">{{transaction.value.dateCreated | date: 'mediumDate'}}. {{transaction.value.dateCreated | date: 'h:mm'}}</ion-label>
+          <ion-label class="transaction-date">{{transaction.value.dateCreated | date: 'mediumDate'}}, {{transaction.value.dateCreated | date: 'h:mm'}}</ion-label>
           <ion-label class="transaction-status"><ion-icon name="ellipse-sharp" class="status-icon" color="{{transaction.value.status === 1 ? 'warning' : ''}}{{transaction.value.status === 2 ? 'success' : ''}}{{transaction.value.status === 3 ? 'danger' : ''}}"></ion-icon>
             {{transaction.value.status === 1 ? 'Pending' : ''}}{{transaction.value.status === 2 ? 'Complete' : ''}}{{transaction.value.status === 3 ? 'Failed' : ''}}
           </ion-label>
@@ -102,18 +102,18 @@
 
 <ion-tab-bar>
   <ion-tab-button tab="discover">
-    <ion-icon name="search-outline"></ion-icon>
-    <ion-label>Discover</ion-label>
+    <ion-icon name="search-outline" color="medium"></ion-icon>
+    <ion-label color="medium">Discover</ion-label>
   </ion-tab-button>
 
   <ion-tab-button tab="wallet">
-    <ion-icon name="wallet-outline"></ion-icon>
-    <ion-label>Wallet</ion-label>
+    <ion-icon name="wallet-outline" color="dark"></ion-icon>
+    <ion-label color="dark">Wallet</ion-label>
   </ion-tab-button>
 
   <ion-tab-button tab="more">
-    <ion-icon name="ellipsis-horizontal-outline"></ion-icon>
-    <ion-label>More</ion-label>
+    <ion-icon name="ellipsis-horizontal-outline" color="medium"></ion-icon>
+    <ion-label color="medium">More</ion-label>
   </ion-tab-button>
 </ion-tab-bar>
 
