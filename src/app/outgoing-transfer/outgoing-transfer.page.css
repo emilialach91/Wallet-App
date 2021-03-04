@@ -23,6 +23,7 @@ ion-item {
   text-align: center;
   margin: 0;
   color: white;
+  border-radius: 0;
 }
 
 .close-icon {

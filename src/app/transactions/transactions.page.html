@@ -13,20 +13,20 @@
   <div *ngFor="let transaction of transactionsByDate| keyvalue">
     <ion-label class="transfer-date">{{transaction.key}}</ion-label>
 
-    <ion-card >
-
-      <ion-col *ngFor="let transactionDetails of transaction.value" >
-        <ion-row (click)="openTransactionWithState(transactionDetails.id, transactionDetails.topUpInfo !== undefined ? true : false)">
-          <ion-label class="transaction-title">Received</ion-label>
-          <ion-label class="transaction-value"> {{transactionDetails.destinationAmount}} ETN</ion-label>
-        </ion-row>
-        <ion-row>
-          <ion-label class="transaction-date">{{transaction.key}}</ion-label>
-          <ion-label class="transaction-status"><ion-icon name="ellipse-sharp" class="status-icon" color="{{transactionDetails.status === 1 ? 'warning' : ''}}{{transactionDetails.status === 2 ? 'success' : ''}}{{transactionDetails.status === 3 ? 'danger' : ''}}"></ion-icon>
-            {{transactionDetails.status === 1 ? 'Pending' : ''}}{{transactionDetails.status === 2 ? 'Complete' : ''}}{{transactionDetails.status === 3 ? 'Failed' : ''}}
-            
-          </ion-label>
-        </ion-row>
+    <ion-card>
+      <ion-col *ngFor="let transactionDetails of transaction.value">
+        <div (click)="openTransactionWithState(transactionDetails.id, transactionDetails.topUpInfo !== undefined ? true : false)">
+          <ion-row>
+            <ion-label class="transaction-title">Received</ion-label>
+            <ion-label class="transaction-value"> {{transactionDetails.destinationAmount}} ETN</ion-label>
+          </ion-row>
+          <ion-row>
+            <ion-label class="transaction-date">{{transaction.key}}</ion-label>
+            <ion-label class="transaction-status"><ion-icon name="ellipse-sharp" class="status-icon" color="{{transactionDetails.status === 1 ? 'warning' : ''}}{{transactionDetails.status === 2 ? 'success' : ''}}{{transactionDetails.status === 3 ? 'danger' : ''}}"></ion-icon>
+              {{transactionDetails.status === 1 ? 'Pending' : ''}}{{transactionDetails.status === 2 ? 'Complete' : ''}}{{transactionDetails.status === 3 ? 'Failed' : ''}}
+            </ion-label>
+          </ion-row>
+        </div>
       </ion-col>
 
     </ion-card>
