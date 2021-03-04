@@ -37,10 +37,6 @@ npm start
 
 ### Outgoing transaction
 
-![ougoing-transfer-pending](https://user-images.githubusercontent.com/59490664/109961857-668e7f80-7ce2-11eb-8fe6-abc20a149b36.png)
-
-### Outgoing transaction
-
 ![outgoing-transfer-failed](https://user-images.githubusercontent.com/59490664/109961879-71e1ab00-7ce2-11eb-87de-02acccef7373.png)
 
 
