@@ -6,11 +6,8 @@ Recruitment task for Electroneum.
 
 ## Tools
 
-- TypeScript
 - Angular
 - Ionic
-- CSS/SASS
-
 
 ## Setup
 
