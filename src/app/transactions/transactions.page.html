@@ -17,7 +17,7 @@
       <ion-col *ngFor="let transactionDetails of transaction.value">
         <div (click)="openTransactionWithState(transactionDetails.id, transactionDetails.topUpInfo !== undefined ? true : false)">
           <ion-row>
-            <ion-label class="transaction-title">Received</ion-label>
+            <ion-label class="transaction-title">{{transactionDetails.paymentType === 1 ? 'Received' : ''}}{{transactionDetails.paymentType === 2 ? 'Sent' : ''}}{{transactionDetails.paymentType === 3 ? 'Top Up' : ''}}</ion-label>
             <ion-label class="transaction-value"> {{transactionDetails.destinationAmount}} ETN</ion-label>
           </ion-row>
           <ion-row>
